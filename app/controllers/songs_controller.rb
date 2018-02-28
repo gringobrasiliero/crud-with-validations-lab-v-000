@@ -10,6 +10,7 @@ end
 
 def edit
   @song = Song.find(params[:id])
+  redirect_to song_path(@song)
 end
 
   def create
@@ -31,9 +32,6 @@ end
         render :edit
       end
   end
-
-
-
 
   def destroy
     Song.find(params[:id]).destroy
