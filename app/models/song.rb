@@ -1,4 +1,4 @@
 class Song < ActiveRecord::Base
   validates :title, presence:true
-
-end
+  validates :released, inclusion: {in: [true, false]}
+  end
