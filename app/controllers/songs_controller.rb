@@ -29,7 +29,7 @@ end
   def update
     @song = Song.find(params[:id])
     @song.update(song_params(:title, :released, :release_year, :artist_name, :genre))
-      if @song.valid?
+      if @song.update(song_params)
         redirect_to song_path(@song)
       else
         render :edit
