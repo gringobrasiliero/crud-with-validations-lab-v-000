@@ -10,7 +10,7 @@ end
 
 def edit
   @song = Song.find(params[:id])
-  
+
 end
 
   def create
@@ -35,7 +35,7 @@ end
 
   def destroy
     Song.find(params[:id]).destroy
-    redirect_to song_url
+    redirect_to songs_url
   end
 
 private
