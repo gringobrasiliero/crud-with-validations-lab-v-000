@@ -1,5 +1,9 @@
 class SongsController < ApplicationController
 
+def index
+  @songs = @song.all
+end
+
   def create
     @song = Song.new(song_params(:title, :released, :release_year, :artist_name, :genre))
     @song.save
