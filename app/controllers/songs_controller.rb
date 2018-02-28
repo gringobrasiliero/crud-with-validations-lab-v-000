@@ -29,7 +29,7 @@ end
 
   def destroy
     Song.find(params[:id]).destroy
-    redirect_to song_url
+    redirect_to :index
   end
 
 private
